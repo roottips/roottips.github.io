@@ -1,10 +1,176 @@
-<!DOCYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>roottips</title>
+    <meta charset="UTF-8">
+    <title>项目说明</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
+    <script src="static/js/script.js"></script>
 </head>
+
 <body>
-  <hl>小锦囊的个人主页</hl>
-  <hl>Hello ~/hl>
+    <div class="container" id="cv">
+        <div class="side">
+            <div class="me">
+                <div class="portrait"></div>
+                <div class="remodal remodal-img" data-remodal-id="portrait-modal">
+                    <h3>请输入图片URL地址：</h3>
+                    <br/>
+                    <input type="text" id="avatar-url">
+                    <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+                </div>
+                <h1 id="username" >roottips</h1>
+                <h4 id="persona-tag" >C / 虚拟化 / 网络操作系统</h4>
+            </div>
+            <div class="profile info-unit">
+                <h2 class="info-header"><i class="iconfont icon-person"></i> <span class="info-title">项目信息</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">项目场景</label><span class="label-value">服务器虚拟化</span></li>
+                    <li>
+                        <label class="left-label">立项课题</label><span class="label-value">内存资源弹性</span></li>
+                    <li>
+                        <label class="left-label">立项时间</label><span class="label-value">2024.2</span></li>
+                    <li>
+                        <label class="left-label">结项时间</label><span class="label-value">2024.12</span></li>
+                </ul>
+            </div>
+            <div class="contact info-unit">
+                <h2 class="info-header"><i class="iconfont icon-call"></i> <span class="info-title">联系方式</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">联系邮箱</label><span class="label-value">snihqrmh@qq.com</span></li>
+                    <li>
+                        <label class="left-label">个人主页</label><span class="label-value">rootips</span></li>
+                    <li>
+                        <label class="left-label">Github</label><span class="label-value">github.com/roottips</span></li>
+                </ul>
+            </div>
+            <div class="stack info-unit">
+                <h2 class="info-header"><i class="iconfont icon-build"></i> <span class="info-title">技术栈</span></h2>
+                <hr>
+                <ul class="stack-list">
+                    <li>
+                        <label class="left-label">操作系统</label><span class="label-value">内核、内存管理、KVM</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">虚拟化</label><span class="label-value">Qemu、K8S</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">显示协议</label><span class="label-value">spice、自定义</span></li>
+                    </li>
+                </ul>
+            </div>
+            <div class="skill info-unit">
+                <h2 class="info-header"><i class="iconfont icon-star"></i> <span class="info-title">技能点</span></h2>
+                <hr>
+                <ul class="progress-list">
+                    <li>
+                        <label class="left-label">C</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">虚拟化</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">网络操作系统</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                </ul>
+            </div>
+            <div class="code info-unit">
+                <h2 class="info-header"><i class="iconfont icon-weixin"></i> <span class="info-title">微信公众号</span></h2>
+                <hr>
+                <div class="weixin">
+                    <img src="static/image/weixin.png" alt="">
+
+                </div>
+            </div>
+            <div class="remodal remodal-img" data-remodal-id="weixin-modal">
+                <h3>请输入图片URL地址：</h3>
+                <br/>
+                <input type="text" id="weixin-url">
+                <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="education info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-education"></i> <span class="info-title">Memory ballooning</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>Memory ballooning:</h3>
+                        <p>
+                            The hypervisor uses the memory ballooning mechanism to release the idle memory on a VM and
+                            allocate the memory to another VM with high memory usage, thereby improving memory utilization.
+                        </p>
+                    </li>
+					<li>
+                        <h3>Memory swapping:</h3>
+                        <p>
+                            Memory swapping: The memory data that is not retrieved by the VM for a long time is swapped 
+							to a disk, and a mapping between the memory data and the disk is created. When the VM 
+							needs to access the memory data again, the memory data is swapped out from the disk back 
+							to the memory block.
+                        </p>
+                    </li>
+					<li>
+                        <h3>Memory sharing and copy-on-write:</h3>
+                        <p>
+                            Memory sharing: Multiple VMs share the same physical memory block (marked in blue), and the 
+							VMs only read data from the memory block. Copy-on-write: When a VM needs to write data to 
+							its memory block, another memory block (marked in red) is allocated to the VM to write the data 
+							and the mapping between the allocated block and the VM is created.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="code info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-introduce"></i> <span class="info-title">项目说明</span></h2>
+                <hr>
+                <div class="introduce">
+				    <table><tr>
+                    <td><img src="static/image/introduce.png" alt=""></td>
+					<td><img src="static/image/introduce2.png" alt=""></td>
+					</tr></table>
+					<table><tr>
+					<td>
+						<img src="static/image/introduce3.png" alt=""></td>
+					<td>
+						<ul class="experience-list">
+						<li>
+							<p> 如图所示： </p>
+						</li>
+						</ul>
+						<ul class="experience-list">
+						<li>
+							<h3>Technical features:</h3>
+							<p>
+							    By leveraging the preceding memory overcommitment techniques, Huawei FusionSphere increases the memory overcommitment
+								ratio by 150%, which makes Huawei overtake its competitors in terms of memory utilization, such as Citrix.
+							</p>
+						</li>
+						<li>
+							<h3>Benefits:</h3>
+							<p>
+							    With the same memory resources, the VM density of the FusionSphere platform increases by 150%, which helps to reduce 
+								procurement costs on memory components by 50%.
+							</p>
+						</li>
+						</ul>
+					</td>
+					</tr></table>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+</html>
